@@ -1,7 +1,7 @@
 
 const messaggio= prompt('inserisci una parola');
 
-const c = controllo(messaggio);
+const parolaInserita = controlloParole(messaggio);
 
 if(c==true){
   console.log("Parola palindroma");
@@ -13,7 +13,7 @@ else{
 
 
 
-function controllo(parola) {
+function controlloParole(parola) {
   let parolaContrario=[];  // dichiaro un array vuoto
   for(i=parola.length-1; i>=0; i--){
     const lettera = parola[i];   
@@ -23,7 +23,7 @@ function controllo(parola) {
   console.log("parola contrario : " + parolaContrario);
 
   if(parola == parolaContrario){
-    return true;
+    return parola == parolaContrario;
   }
   else{
     return false;
